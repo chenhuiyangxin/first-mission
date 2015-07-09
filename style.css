@@ -8,7 +8,6 @@
 }
 #part_1{
 	margin: 0 auto;
-	background-color: rgb(1,113,197);
 	height: 500px;
 	width: 668px;
 	position: relative;
@@ -20,6 +19,7 @@
 	position: absolute;
   	top: 34px;
   	left: 22px;
+  	display: none;
 }
 
 #part_1 .img_2{
@@ -28,6 +28,7 @@
 	position: absolute;
     top: 217px;
   	left: 22px;
+  	display: none;
 }
 
 #part_1 .img_3{
@@ -36,6 +37,22 @@
 	position: absolute;
   	bottom: 23px;
   	left: 22px;
+  	display: none;
+}
+
+@-webkit-keyframes l-r{
+	from{right: -69px;
+		opacity: 0;
+	}
+	to{right: -21px;
+		opacity: 1;
+	}
+
+}
+
+@-webkit-keyframes appear{
+	from{display: none;}
+	to{display: block;};
 }
 
 #part_1 .img_4{
@@ -44,11 +61,29 @@
 	position: absolute;
   	right: -21px;
   	bottom: 18px;
+  	
+}
+
+#part_1 .img_4{
+	-webkit-animation-name: l-r;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-delay: 2.55s;
+}
+
+#part_1 .img_4{
+	-webkit-animation-name: appear;
+	-webkit-animation-duration: 0;
+	-webkit-animation-timing-function: linear;
 }
 
 /*第二部分*/
 
 .wrap_2{
+	background-color: rgb(1,113,197);
+}
+
+.wrap_2_1{
 
 }
 
@@ -64,6 +99,7 @@
 	height: 61px;
 	position: absolute;
   	top: 57px;
+	display: none;
   	left: 22px;
 }
 
@@ -71,6 +107,7 @@
 	width: 441px;
 	height: 108px;
 	position: absolute;
+	display: none;
   	top: 132px;
   	left: 22px;
 }
@@ -80,6 +117,7 @@
 	height: 133px;
 	position: absolute;
   	top: 266px;
+	display: none;
   	left: 96px;
 }
 
@@ -93,6 +131,7 @@
 	background-color: rgb(23,126,203);
 	position: absolute;
   	top: 422px;
+	display: none;
   	left: 44px;
 }
 
@@ -101,6 +140,7 @@
 	height: 133px;
 	position: absolute;
   	top: 266px;
+	display: none;
   	left: 404px;
 }
 
@@ -114,6 +154,7 @@
 	background-color: rgb(1,174,240);
 	position: absolute;
   	top: 422px;
+	display: none;
   	left: 336px;
 }
 
@@ -864,12 +905,28 @@
 
 
 
+@-webkit-keyframes around{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
 
+#head img{
+	background-color: rgb(1,113,197);
+	width: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
 
+#head img{
+	-webkit-animation-name: around;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+}
 
-
-
-
+#total{
+}
 
 
 
