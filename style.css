@@ -40,44 +40,15 @@
   	display: none;
 }
 
-@-webkit-keyframes l-r{
-	from{right: -69px;
-		opacity: 0;
-	}
-	to{right: -21px;
-		opacity: 1;
-	}
-
-}
-
-@-webkit-keyframes appear{
-	from{display: none;}
-	to{display: block;};
-}
-
 #part_1 .img_4{
 	width: 342px;
 	height: 342px;
 	position: absolute;
-  	right: -21px;
+  	right: -69px;
   	bottom: 18px;
+  	opacity: 0;
   	
 }
-
-#part_1 .img_4{
-	-webkit-animation-name: l-r;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: linear;
-	-webkit-animation-delay: 2.55s;
-}
-
-#part_1 .img_4{
-	-webkit-animation-name: appear;
-	-webkit-animation-duration: 0;
-	-webkit-animation-timing-function: linear;
-}
-
-/*第二部分*/
 
 .wrap_2{
 	background-color: rgb(1,113,197);
@@ -895,7 +866,7 @@
 
 /*第十一部分*/
 
-#part_11 .top{
+#top{
 	width: 94px;
 	height: 83px;
 	position: fixed;
@@ -903,7 +874,14 @@
 	right: 100px;
 }
 
-
+#top_1{
+	width: 108px;
+  	height: 94px;
+  	position: fixed;
+  	bottom: 0;
+  	right: 93px;
+  	display: none;
+}
 
 @-webkit-keyframes around{
 	from{transform: rotate(0deg);}
