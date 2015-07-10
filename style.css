@@ -225,6 +225,14 @@
 }
 
 #part_4 .img_3{
+	width: 516px;
+	height: 400px;
+	position: absolute;
+	bottom: 10px;
+	left: 185px; 
+}
+
+#part_4 .img_4{
 	width: 305px;
 	background-color: rgb(1,174,240);
 	height: 53px;
@@ -233,7 +241,7 @@
 	left: 22px;
 }
 
-#part_4 .img_4{
+#part_4 .img_5{
 	width: 305px;
 	background-color: rgb(1,174,240);
 	height: 53px;
@@ -242,13 +250,7 @@
 	left: 22px;
 }
 
-#part_4 .img_5{
-	width: 516px;
-	height: 400px;
-	position: absolute;
-	bottom: 10px;
-	left: 185px; 
-}
+
 
 /*第五部分*/
 
@@ -345,14 +347,6 @@
 }
 
 #part_6 .img_5{
-	width: 357px;
-	height: 69px;
-	position: absolute;
-	bottom: 156px;
-	left: 22px;
-}
-
-#part_6 .img_6{
 	width: 257px;
 	height: 53px;
 	background-color: rgb(1,174,240);
@@ -360,6 +354,16 @@
 	bottom: 85px;
 	left: 22px;
 }
+
+#part_6 .img_6{
+	width: 357px;
+	height: 69px;
+	position: absolute;
+	bottom: 156px;
+	left: 22px;
+}
+
+
 
 #part_6 .img_7{
 	width: 289px;
