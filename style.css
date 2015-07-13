@@ -224,6 +224,15 @@
 	right: 48px;
 }
 
+#part_3 .img_5_1{
+	width: 254px;
+	height: 52px;
+	background-color: rgb(255,168,0);
+	position: absolute;
+	top: 272px;
+	right: 48px;
+}
+
 /*第四部分*/
 
 .wrap_4{
@@ -270,6 +279,15 @@
 	left: 22px;
 }
 
+#part_4 .img_4_1{
+	width: 305px;
+	background-color: rgb(255,168,0);
+	height: 53px;
+	position: absolute;
+	top: 304px;
+	left: 22px;
+}
+
 #part_4 .img_5{
 	width: 305px;
 	background-color: rgb(1,174,240);
@@ -279,7 +297,14 @@
 	left: 22px;
 }
 
-
+#part_4 .img_5_1{
+	width: 305px;
+	background-color: rgb(255,168,0);
+	height: 53px;
+	position: absolute;
+	top: 373px;
+	left: 22px;
+}
 
 /*第五部分*/
 
@@ -324,6 +349,15 @@
 	width: 224px;
 	height: 53px;
 	background-color: rgb(1,174,240);
+	position: absolute;
+	bottom: 98px;
+	right: 126px;
+}
+
+#part_5 .img_4_1{
+	width: 224px;
+	height: 53px;
+	background-color: rgb(255,168,0);
 	position: absolute;
 	bottom: 98px;
 	right: 126px;
@@ -375,6 +409,15 @@
 	right: 153px;
 }
 
+#part_6 .img_4_1{
+	width: 257px;
+	height: 53px;
+	background-color: rgb(255,168,0);
+	position: absolute;
+	top: 240px;
+	right: 153px;
+}
+
 #part_6 .img_5{
 	width: 257px;
 	height: 53px;
@@ -382,6 +425,16 @@
 	position: absolute;
 	bottom: 85px;
 	left: 22px;
+}
+
+#part_6 .img_5_1{
+	width: 257px;
+	height: 53px;
+	background-color: rgb(255,168,0);
+	position: absolute;
+	bottom: 85px;
+	left: 22px;
+
 }
 
 #part_6 .img_6{
