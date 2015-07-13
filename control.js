@@ -33,36 +33,27 @@ check = setInterval(function(){
 	else{
 		$("#top").slideUp(250);
 	};
-},1);
+},500);
+
+//打断正在跳转的
+var istop = true;
+window.onscroll = function(){
+	if(!istop){
+		clearInterval(stop);
+	}
+	istop = false;
+}
 
 //回到顶部
 var top1 = document.getElementById('top');
 var top2 = document.getElementById('top_1');
-/*
-top1.touchstart = function(){
-	this.style.display = "none";
-	top2.style.display = "block";
-}
-
-top2.touchend = function(){
-	this.style.display = "none";
-	top1.style.display = "block";
-}
-top1.onmousedown = function(){
-	this.style.display = "none";
-	top2.style.display = "block";
-}
-
-top2.onmouseup = function(){
-	this.style.display = "none";
-	top1.style.display = "block";
-}
-*/
+var stop;
 top1.onclick = function(){
-    var stop;
+	console.log("dede");
     stop = setInterval(function(){
     		var scrolltop = window.pageYOffset;
     		var speed = Math.ceil(scrolltop / 7);
+    		istop = true;
     		document.documentElement.scrollTop = document.body.scrollTop= (scrolltop - speed);
     		if (scrolltop == 0) {
     			clearInterval(stop);
@@ -75,26 +66,43 @@ top1.onclick = function(){
 
 //for on the go
 var ongo = document.getElementsByClassName('img_3');
+var ongo1 = document.getElementsByClassName('img_3_1');
 var foron = document.getElementsByClassName('img_4');
-ongo[1].onclick = function(){
-		var stop2 = setInterval(function(){
+
+$("#part_2 .img_3").bind("touchstart",function(){
+	ongo[1].style.display = "none";
+	ongo1[0].style.display = "block";
+	$("#part_2 .img_4").removeClass("img_4").addClass("img_4_1");
+})
+
+ongo1[0].onmouseup = function(){
+			this.style.display = "none";
+			ongo[1].style.display = "block";
+			$("#part_2 .img_4_1").removeClass("img_4_1").addClass("img_4");
+			setTimeout(lag,200);
+			function lag(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop2 = window.pageYOffset;
 			var speed2 = Math.ceil((1000 - scrolltop2) / 5)
 			if (scrolltop2 == 1000) {
-				clearInterval(stop2);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 +speed2;
 
 		},30);
 
+			}
+
 }
 
 foron[1].onclick = function(){
-		var stop2 = setInterval(function(){
+		        stop = setInterval(function(){
+    		istop = true;
 				var scrolltop2 = window.pageYOffset;
 				var speed2 = Math.ceil((1000 - scrolltop2) / 5)
 				if (scrolltop2 == 1000) {
-					clearInterval(stop2);
+					clearInterval(stop);
 				};
 				document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 +speed2;
 
@@ -105,42 +113,26 @@ foron[1].onclick = function(){
 var fhome = document.getElementsByClassName('img_5');
 var home = document.getElementsByClassName('img_6');
 fhome[0].onclick = function(){
-		var stop3 = setInterval(function(){
+		 	stop = setInterval(function(){
+    		istop = true;
 			var scrolltop3 = window.pageYOffset;
-			var speed3 = Math.ceil((2695 - scrolltop3) / 7)
+			var speed3 = Math.ceil((2695 - scrolltop3) / 7);
+			istop = true;
 			if (scrolltop3 == 2695) {
-				clearInterval(stop3);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 +speed3;
 
 		},30);
 }
 
-//合并
-/*
-var forondata = [0,1000,3455,3744,4055,4697];
-var fhomedata = [2695,1500,2195,4372];
-
-for(var i = 0;i <= 5;i++){
-	foron[i].onclick = function(){
-			var stop2 = setInterval(function(){
-			var scrolltop2 = window.pageYOffset;
-			var speed2 = Math.ceil((forondata[i] - scrolltop2) / 5)
-			if (scrolltop2 == forondata[i]) {
-				clearInterval(stop2);
-			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 +speed2;
-
-		},30);
-	}
-}
-*/
 home[0].onclick = function(){
-		var stop3 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop3 = window.pageYOffset;
 			var speed3 = Math.ceil((2695 - scrolltop3) / 7)
 			if (scrolltop3 == 2695) {
-				clearInterval(stop3);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 +speed3;
 
@@ -149,16 +141,26 @@ home[0].onclick = function(){
 
 //choose tablet
 
+$("#part_3 .img_4").bind("touchstart",function(){
+	$(this).removeClass("img_4").addClass("img_4_1");
+})
+
 foron[2].onclick = function(){
-		var stop4 = setInterval(function(){
+			this.className = "img_4";
+			setTimeout(lag,200);
+			function lag(){
+			stop = setInterval(function(){
+    		istop = true;
 			var scrolltop4 = window.pageYOffset;
 			var speed4 = Math.ceil((3455 - scrolltop4) / 7)
 			if (scrolltop4 == 3455) {
-				clearInterval(stop4);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop4 +speed4;
 
 		},30);
+			};
+			
 
 
 }
@@ -166,11 +168,12 @@ foron[2].onclick = function(){
 //not the right fit
 
 fhome[1].onclick = function(){
-		var stop5 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop5 = window.pageYOffset;
 			var speed5 = Math.ceil((1500 - scrolltop5) / 7)
 			if (scrolltop5 == 1500) {
-				clearInterval(stop5);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop5 +speed5;
 
@@ -182,11 +185,12 @@ fhome[1].onclick = function(){
 //choose labtop
 
 foron[3].onclick = function(){
-		var stop6 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop6 = window.pageYOffset;
-			var speed6 = Math.ceil((3744 - scrolltop6) / 7)
-			if (scrolltop6 == 3744) {
-				clearInterval(stop6);
+			var speed6 = Math.ceil((3746 - scrolltop6) / 7)
+			if (scrolltop6 == 3746) {
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop6 +speed6;
 
@@ -195,11 +199,12 @@ foron[3].onclick = function(){
 
 //want a little of both
 fhome[2].onclick = function(){
-		var stop7 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop7 = window.pageYOffset;
 			var speed7 = Math.ceil((2195 - scrolltop7) / 5)
 			if (scrolltop7 == 2195) {
-				clearInterval(stop7);
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop7 +speed7;
 
@@ -209,11 +214,12 @@ fhome[2].onclick = function(){
 //choose 2 in 1
 
 foron[4].onclick = function(){
-		var stop8 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop8 = window.pageYOffset;
-			var speed8 = Math.ceil((4055 - scrolltop8) / 5)
-			if (scrolltop8 == 4055) {
-				clearInterval(stop8);
+			var speed8 = Math.ceil((4057 - scrolltop8) / 5)
+			if (scrolltop8 == 4057) {
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop8 +speed8;
 
@@ -223,11 +229,12 @@ foron[4].onclick = function(){
 //choose desktop
 
 foron[5].onclick = function(){
-		var stop9 = setInterval(function(){
+		    stop = setInterval(function(){
+    		istop = true;
 			var scrolltop9 = window.pageYOffset;
-			var speed9 = Math.ceil((4697 - scrolltop9) / 5)
-			if (scrolltop9 == 4697) {
-				clearInterval(stop9);
+			var speed9 = Math.ceil((4699 - scrolltop9) / 5)
+			if (scrolltop9 == 4699) {
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop9 +speed9;
 
@@ -236,11 +243,12 @@ foron[5].onclick = function(){
 
 //choose all-in-one
 fhome[3].onclick = function(){
-		var stop10 = setInterval(function(){
+		    stop = setInterval(function(){
 			var scrolltop10 = window.pageYOffset;
-			var speed10 = Math.ceil((4372 - scrolltop10) / 5)
-			if (scrolltop10 == 4372) {
-				clearInterval(stop10);
+    		istop = true;
+			var speed10 = Math.ceil((4374 - scrolltop10) / 5)
+			if (scrolltop10 == 4374) {
+				clearInterval(stop);
 			};
 			document.documentElement.scrollTop = document.body.scrollTop = scrolltop10 +speed10;
 
