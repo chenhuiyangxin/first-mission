@@ -1,6 +1,6 @@
 window.onload = function () {
 //开头动画
-	$("#head img").delay(1500).fadeOut(500,function(){
+	$("#head img").delay(1200).fadeOut(800,function(){
 		$("#part_1 .img_1").fadeIn(400,function(){
 			$("#part_1 .img_2").fadeIn(370,function(){
 				$("#part_1 .img_4").animate({right:"-21px",opacity:"1"},330,function(){
@@ -28,7 +28,6 @@ window.onload = function () {
 var istop = true;
 //获取页面可视区高度
 var clientHeight = document.documentElement.clientHeight;
-console.log(clientHeight);
 //滚动条滚动时触发
 window.onscroll = function(){
     var scrolltop = window.pageYOffset;
@@ -58,21 +57,17 @@ $("#top").bind("touchstart",function(){
 top2.onmouseup = function(){
 	this.style.display = "none";
 	top1.style.display = "block";
-	console.log("dede");
     stop = setInterval(function(){
     var scrolltop = window.pageYOffset;
     var speed = Math.ceil(scrolltop / 7);
     istop = true;
-    document.documentElement.scrollTop = document.body.scrollTop= (scrolltop - speed);
+    document.documentElement.scrollTop = document.body.scrollTop = (scrolltop - speed);
     if (scrolltop == 0) {
     	clearInterval(stop);
     	};
     },30);
 }
 
-top1.onclick = function(){
-
-}
 
 
 //分页跳转
@@ -101,10 +96,9 @@ ongo1[0].onmouseup = function(){
 			if (scrolltop2 == 1000) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 +speed2;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 + speed2;
 
-		},30);
-
+				},30);
 			}
 
 }
@@ -116,23 +110,22 @@ $("#part_2 .img_4").bind("touchstart",function(){
 })
 
 foron[1].onclick = function(){
-				ongo1[0].style.display = "none";
-				ongo[1].style.display = "block";
-				this.className = "img_4";
-				setTimeout(lag,100);
-				function lag(){
-		        stop = setInterval(function(){
-    			istop = true;
-				var scrolltop2 = window.pageYOffset;
-				var speed2 = Math.ceil((1000 - scrolltop2) / 5)
-				if (scrolltop2 == 1000) {
-					clearInterval(stop);
-				};
-				document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 +speed2;
+			ongo1[0].style.display = "none";
+			ongo[1].style.display = "block";
+			this.className = "img_4";
+			setTimeout(lag,100);
+			function lag(){
+	        stop = setInterval(function(){
+			istop = true;
+			var scrolltop2 = window.pageYOffset;
+			var speed2 = Math.ceil((1000 - scrolltop2) / 5)
+			if (scrolltop2 == 1000) {
+				clearInterval(stop);
+			};
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop2 + speed2;
 
-			},30);					
-				}
-
+		},30);					
+			}
 }
 
 //for home
@@ -160,11 +153,10 @@ fhome1[0].onmouseup = function(){
 			if (scrolltop3 == 2695) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 +speed3;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 + speed3;
 
 		},30);				
 			}
-
 }
 
 $("#part_2 .img_6").bind("touchstart",function(){
@@ -186,11 +178,10 @@ home[0].onclick = function(){
 			if (scrolltop3 == 2695) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 +speed3;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop3 + speed3;
 
 		},30);				
 			}
-
 }
 
 //choose tablet
@@ -210,13 +201,10 @@ foron[2].onclick = function(){
 			if (scrolltop4 == 3455) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop4 +speed4;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop4 + speed4;
 
 		},30);
 			};
-			
-
-
 }
 
 //not the right fit
@@ -236,13 +224,10 @@ fhome[1].onclick = function(){
 			if (scrolltop5 == 1500) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop5 +speed5;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop5 + speed5;
 
 		},30);
-
-
 			}
-
 }
 
 //choose labtop
@@ -262,11 +247,10 @@ foron[3].onclick = function(){
 			if (scrolltop6 == 3746) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop6 +speed6;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop6 + speed6;
 
 		},30);				
 			}
-
 }
 
 //want a little of both
@@ -286,7 +270,7 @@ fhome[2].onclick = function(){
 			if (scrolltop7 == 2195) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop7 +speed7;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop7 + speed7;
 
 		},30);				
 			}
@@ -310,11 +294,10 @@ foron[4].onclick = function(){
 			if (scrolltop8 == 4057) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop8 +speed8;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop8 + speed8;
 
 		},30);				
 			}
-
 }
 
 //choose desktop
@@ -334,11 +317,10 @@ foron[5].onclick = function(){
 			if (scrolltop9 == 4699) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop9 +speed9;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop9 + speed9;
 
 		},30);				
 			}
-
 }
 
 //choose all-in-one
@@ -358,11 +340,10 @@ fhome[3].onclick = function(){
 			if (scrolltop10 == 4374) {
 				clearInterval(stop);
 			};
-			document.documentElement.scrollTop = document.body.scrollTop = scrolltop10 +speed10;
+			document.documentElement.scrollTop = document.body.scrollTop = scrolltop10 + speed10;
 
 		},30);				
 			}
-
 }
 
 //legal

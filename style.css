@@ -50,14 +50,13 @@
   	
 }
 
+/*第二部分*/
+
 .wrap_2{
 	background-color: rgb(1,113,197);
 	margin-top: -2px;
 }
 
-.wrap_2_1{
-
-}
 
 #part_2{
 	margin: 0 auto;
@@ -235,9 +234,6 @@
 
 /*第四部分*/
 
-.wrap_4{
-
-}
 
 #part_4{
 	margin: 0 auto;
@@ -365,9 +361,6 @@
 
 /*第六部分*/
 
-.wrap_6{
-
-}
 
 #part_6{
 	margin: 0 auto;
@@ -479,9 +472,6 @@
 
 /*第八部分*/
 
-.wrap_8{
-
-}
 
 #part_8{
 	margin: 0 auto;
@@ -838,9 +828,6 @@
 
 /*第十部分*/
 
-.wrap_10{
-
-}
 
 #part_10{
 	margin: 0 auto;
@@ -998,9 +985,6 @@
 	-webkit-animation-duration: 0.5s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
-}
-
-#total{
 }
 
 
